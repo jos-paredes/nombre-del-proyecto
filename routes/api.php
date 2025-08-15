@@ -15,6 +15,15 @@ use App\Http\Controllers\procesosController;
 use App\Http\Controllers\PdfMenuController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\RegistroProduccionController;
+use App\Http\Controllers\TemperaturaController;
+
+
+
+use App\Http\Controllers\ResistenciaController;
+
+
+use App\Http\Controllers\FormularioGeneralProdController;
+
 
 Route::prefix('messages')->group(function () {
     Route::post('/', [MessageController::class, 'store']); // Crear mensaje
@@ -107,3 +116,10 @@ Route::get('/users', [UserController::class, 'index']);
 
 
 Route::post('/registro-produccion', [RegistroProduccionController::class, 'store']);
+
+
+Route::post('formulario-general', [FormularioGeneralProdController::class, 'store']);
+
+Route::post('resistencias', [ResistenciaController::class, 'store']);
+
+Route::post('/temperaturas', [TemperaturaController::class, 'store']);

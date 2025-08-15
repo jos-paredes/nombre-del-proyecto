@@ -17,3 +17,6 @@ class PdfMenuController extends Controller
         return view('pdfmenu.index', compact('pdfFiles'));
     }
 }
+
+
+
